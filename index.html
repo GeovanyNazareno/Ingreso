@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introducción a JavaScript</h1>
+    
+
+    <script>
+        //creo la variable numero y le generamos un arreglo
+        //para guardar los numero que vamos a ingresar
+        var numeros = []; 
+        //inicio un for 
+        for (var i = 0; i < 5; i++) {
+            var num = prompt("Ingrese el número " + (i + 1) + ":");
+            numeros[i] = num;
+        }
+        // Inicio las variables para ver el numero mayor y menor
+        var mayor = numeros[0];
+        var menor = numeros[0];
+        // creo un for para recorrer el arreglo para encontrar
+        //el numero mayor y menor de mi arreglo
+        for (var i = 1; i < numeros.length; i++) {
+            if (numeros[i] > mayor) {
+            mayor = numeros[i];
+            }
+            if (numeros[i] < menor) {
+            menor = numeros[i];
+            }
+        }
+        //muestro todos los numero ingresados
+        document.write("<br><br>Los números ingresados son: ");
+        document.write("<br>")
+        for (var i = 0; i < numeros.length; i++) {
+            document.write(numeros[i] + "<br>");
+        }
+        // Mostramos los resultados del mayor y menor
+        document.write("<br>El número mayor es: " + mayor);
+        document.write("<br>El número menor es: " + menor);
+</script>
+
+</body>
+</html>
